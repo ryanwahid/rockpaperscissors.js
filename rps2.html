@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RPS Round 2</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+    you = prompt("Rock, paper, or scissors?", "");
+    //previous line requires "rock","paper","scissors" as input
+
+    comp = Math.floor(3 * Math.random());
+    switch (comp) {
+        case 0:
+            comp = "rock";
+            break;
+        case 1:
+            comp = "paper";
+            break;
+        case 2:
+            comp = "scissors";
+            break;
+    }
+    if (comp == "rock") {
+        if (you == "rock") document.write("tie");
+        if (you == "paper") document.write("win");
+        if (you == "scissors") document.write("loss");
+    }
+    if (comp == "paper") {
+        if (you == "rock") document.write("loss");
+        if (you == "paper") document.write("tie");
+        if (you == "scissors") document.write("win");
+    }
+    if (comp == "scissors") {
+        if (you == "rock") document.write("win");
+        if (you == "paper") document.write("loss");
+        if (you == "scissors") document.write("tie");
+    }
+    document.write("\r\nYou played " + you + ", and computer played " + comp + ".");
+    </script>
+</body>
+
+</html>
